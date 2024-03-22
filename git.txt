@@ -1,0 +1,13 @@
+изменить сообщение определённого коммита
+git commit --amend -m "#1001 forgotten" изменить сообщение последнего коммита
+git commit -a --amend --no-edit редактирует последний коммит без нового сообщения
+git reset --hard (путь до папки/файла) - сбросить изменения всех файлов папки или файла
+git diff develop..xxx или наоборот - pull request; 
+git diff mybranch master -- path/myfile.cs compare file in different branches
+git cherry pick <commit> [--no-commit] под определённой веткой. без --no-commit автоматически сделает коммит
+git add .. - add all files to index
+git pull origin branch - получить удалённую ветку (в текущую ветку?) checkout не происходит
+git fetch [origin branch]; git branch -v -a - checkout на удалённую ветку
+git branch <branch> создать ветку от текущей
+git branch -d/-D <branch> удалить локальную ветку. перейти начала на другую
+git push -d origin <branch> удалить удалённую ветку

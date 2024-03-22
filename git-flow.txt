@@ -1,0 +1,15 @@
+GIT FLOW
+
+* разрешение конфликтов *
+сделать от develop develop-copy. перейти в develop-copy
+в неё пытаться смёржить branch. конфликты решить, завиксировать мёрж-коммитом
+перейти в branch. cherry-pick-м взять мёрж-коммит
+
+* разрешение конфликтов rebase *
+сделать от develop develop2
+rebase ветки на develop2
+можно смёржить rebase, можно не мёржить
+
+* разрешение конфликтов merge *
+сделать от develop develop2
+merge ветки на develop2
