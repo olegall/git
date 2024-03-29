@@ -11,3 +11,7 @@ git fetch [origin branch]; git branch -v -a - checkout на удалённую �
 git branch <branch> создать ветку от текущей
 git branch -d/-D <branch> удалить локальную ветку. перейти начала на другую
 git push -d origin <branch> удалить удалённую ветку
+git fetch origin <branch>; git checkout <branch> затянуть ветку
+git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+git log --oneline
+pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
