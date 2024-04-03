@@ -15,3 +15,6 @@ git fetch origin <branch>; git checkout <branch> затянуть ветку
 git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
 git log --oneline
 pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
+git commit --amend -m "an updated commit message" отредактировать сообщение к последнему коммиту. перезаписывает коммит новым
+git commit --amend --no-edit, перед этим git add <file> отредактировать последний коммит
+git rm <file>, git commit --amend --no-edit - удалить случайно попавший в коммит файл
