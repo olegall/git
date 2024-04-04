@@ -1,20 +1,20 @@
-изменить сообщение определённого коммита
-git commit --amend -m "#1001 forgotten" изменить сообщение последнего коммита
-git commit -a --amend --no-edit редактирует последний коммит без нового сообщения
 git reset --hard (путь до папки/файла) - сбросить изменения всех файлов папки или файла
 git diff develop..xxx или наоборот - pull request; 
-git diff mybranch master -- path/myfile.cs compare file in different branches
-git cherry pick <commit> [--no-commit] под определённой веткой. без --no-commit автоматически сделает коммит
+git diff mybranch master -- path/myfile.cs - compare file in different branches
+git cherry pick <commit> [--no-commit] под определённой веткой. без --no-commit - автоматически сделает коммит
 git add .. - add all files to index
 git pull origin branch - получить удалённую ветку (в текущую ветку?) checkout не происходит
 git fetch [origin branch]; git branch -v -a - checkout на удалённую ветку
-git branch <branch> создать ветку от текущей
-git branch -d/-D <branch> удалить локальную ветку. перейти начала на другую
-git push -d origin <branch> удалить удалённую ветку
-git fetch origin <branch>; git checkout <branch> затянуть ветку
-git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
-git log --oneline
-pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
-git commit --amend -m "an updated commit message" отредактировать сообщение к последнему коммиту. перезаписывает коммит новым
-git commit --amend --no-edit, перед этим git add <file> отредактировать последний коммит
+git branch <branch> - создать ветку от текущей
+git branch -d/-D <branch> - удалить локальную ветку. перейти начала на другую
+git push -d origin <branch> - удалить удалённую ветку
+git fetch origin <branch>; git checkout <branch> - затянуть ветку
+git log --pretty=format:"%h%x09%an%x09%ad%x09%s"; git log --oneline; pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
+git commit --amend -m "#1001 forgotten" - изменить сообщение последнего коммита
+git commit -a --amend --no-edit - редактирует последний коммит без нового сообщения
+git commit --amend -m "an updated commit message" - отредактировать сообщение к последнему коммиту. перезаписывает коммит новым
+git commit --amend --no-edit, перед этим git add <file> - отредактировать последний коммит
 git rm <file>, git commit --amend --no-edit - удалить случайно попавший в коммит файл
+git rebase -i HEAD~2 -> откроется текстовой редактор -> самый ранний коммит pick, остальные squash -> сохранить, закрыть текстовой редактор - склеить 2 последних коммита
+git stash/git stash pop спрятать/вернуть изменения в индексе
+git stash show - показать файлы
