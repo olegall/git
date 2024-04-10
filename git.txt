@@ -10,10 +10,9 @@ git branch -d/-D <branch> - удалить локальную ветку. пер
 git push -d origin <branch> - удалить удалённую ветку
 git fetch origin <branch>; git checkout <branch> - затянуть ветку
 git log --pretty=format:"%h%x09%an%x09%ad%x09%s"; git log --oneline; pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
-git commit --amend -m "#1001 forgotten" - изменить сообщение последнего коммита
-git commit -a --amend --no-edit - редактирует последний коммит без нового сообщения
 git commit --amend -m "an updated commit message" - отредактировать сообщение к последнему коммиту. перезаписывает коммит новым
-git commit --amend --no-edit, перед этим git add <file> - отредактировать последний коммит
+git commit --amend --no-edit, перед этим git add <file> - отредактировать последний коммит. если до этого делался push - git push --force - последние коммиты на локальной и удалённой ветке разные
+git commit -a --amend --no-edit - редактирует последний коммит без нового сообщения
 git rm <file>, git commit --amend --no-edit - удалить случайно попавший в коммит файл
 git rebase -i HEAD~2 -> откроется текстовой редактор -> самый ранний коммит pick, остальные squash -> сохранить, закрыть текстовой редактор - склеить 2 последних коммита
 git stash/git stash pop спрятать/вернуть изменения в индексе
