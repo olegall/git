@@ -1,7 +1,7 @@
 git reset --hard (путь до папки/файла) - сбросить изменения всех файлов папки или файла
 git diff develop..xxx или наоборот - pull request; 
 git diff mybranch master -- path/myfile.cs - compare file in different branches
-git cherry pick <commit> [--no-commit] под определённой веткой. без --no-commit - автоматически сделает коммит
+git cherry-pick <commit> [--no-commit] под текущей веткой. без --no-commit - автоматически сделает коммит
 git add .. - add all files to index
 git pull origin branch - получить удалённую ветку (в текущую ветку?) checkout не происходит
 git fetch [origin branch]; git branch -v -a - checkout на удалённую ветку
@@ -14,6 +14,7 @@ git commit --amend -m "an updated commit message" - отредактироват
 git commit --amend --no-edit, перед этим git add <file> - отредактировать последний коммит. если до этого делался push - git push --force - последние коммиты на локальной и удалённой ветке разные
 git commit -a --amend --no-edit - редактирует последний коммит без нового сообщения
 git rm <file>, git commit --amend --no-edit - удалить случайно попавший в коммит файл
+git rebase <target> - под текущей веткой. коммиты ветки перезапишутся, встанут после head target, head и ветка переместятся в конец
 git rebase -i HEAD~2 -> - откроется текстовой редактор -> самый ранний коммит pick, остальные squash -> сохранить, закрыть текстовой редактор - склеить 2 последних коммита
 git stash/git stash pop - спрятать/вернуть изменения в индексе
 git stash show - показать файлы
