@@ -19,3 +19,4 @@ git rebase -i HEAD~2 -> - откроется текстовой редактор
 git stash/git stash pop - спрятать/вернуть изменения в индексе
 git stash show - показать файлы
 git stash -- xxx/yyy/file.txt - определённый файл
+git merge origin/review/rudn-report --ff-only - fast-forward апдейт удалённой ветки 
