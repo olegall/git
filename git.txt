@@ -7,6 +7,7 @@ git pull origin branch - получить удалённую ветку (в те
 git fetch [origin branch]; git branch -v -a - checkout на удалённую ветку
 git branch <branch> - создать ветку от текущей
 git branch -d/-D <branch> - удалить локальную ветку. перейти начала на другую
+git branch -m <newname> - переименовать ветку. под текущей
 git push -d origin <branch> - удалить удалённую ветку
 git fetch origin <branch>/git fetch; git checkout <branch> - затянуть ветку
 git log --pretty=format:"%h%x09%an%x09%ad%x09%s"; git log --oneline; pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
