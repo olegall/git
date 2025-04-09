@@ -13,6 +13,7 @@ git fetch origin <branch>/git fetch; git checkout <branch> - затянуть в
 git log --pretty=format:"%h%x09%an%x09%ad%x09%s"; git log --oneline; pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
 git commit --amend -m "an updated commit message" - отредактировать сообщение к последнему коммиту. перезаписывает коммит новым
 git commit --amend --no-edit, перед этим git add <file> - отредактировать последний коммит. если до этого делался push - git push --force - последние коммиты на локальной и удалённой ветке разные
+git commit --amend - файл, который д.б. в изменённом коммите д.б. в рабочей области (git add). при закрытии связанного редактора (notepad++) коммит произойдёт автоматически (изменится последний коммит)
 git commit -a --amend --no-edit - редактирует последний коммит без нового сообщения
 git rm <file>, git commit --amend --no-edit - удалить случайно попавший в коммит файл
 git rebase <target> - под текущей веткой. коммиты ветки перезапишутся, встанут после head target, head и ветка переместятся в конец
