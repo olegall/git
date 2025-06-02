@@ -24,3 +24,11 @@ git stash/git stash pop - спрятать/вернуть изменения в 
 git stash show - показать файлы
 git stash -- xxx/yyy/file.txt - определённый файл
 git merge origin/review/rudn-report --ff-only - fast-forward апдейт удалённой ветки
+
+отредактировать сообщение в к.л. коммитах https://stackoverflow.com/questions/1186535/how-do-i-modify-a-specific-commit
+	git rebase --interactive a29bcd7a8524040058c10ff1791be628e56d9f2b~ коммит, с которого и до head будут находятся редактируемые коммиты. в этом интервале будет rebase
+	откроется текстовой редактор
+	у редактируемых коммитов заменить pick на reword. гит ждёт закрытия редактора
+	закрыть редактор
+	следовать подсказкам гита, итеративно поменять сообщения коммитов
+	
